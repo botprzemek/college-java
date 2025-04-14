@@ -38,13 +38,13 @@ public class Converter extends Dialog {
         int index = (int) (Math.log(number) / Math.log(system.value)) + 1;
         char[] chars = new char[index--];
 
-        String table =
+        char[] table =
             (system == NUMBER_SYSTEM.HEXADECIMAL)
-                ? "0123456789ABCDEF"
-                : "01234567";
+                ? new char[] {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
+                : new char[] {'0', '1', '2', '3', '4', '5', '6', '7'};
 
         while (number > 0) {
-            chars[index--] = table.charAt(number % system.value);
+            chars[index--] = table[number % system.value];
             number /= system.value;
         }
 
