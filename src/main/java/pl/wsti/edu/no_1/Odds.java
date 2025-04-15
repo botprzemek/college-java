@@ -13,7 +13,7 @@ public class Odds extends Dialog {
 
     private static int calculate(int number) {
         if (number < 1) {
-            throw new IllegalArgumentException(number + " is not a valid number");
+            throw new IllegalArgumentException("Number argument must be a positive integer");
         }
 
         int value = 0;

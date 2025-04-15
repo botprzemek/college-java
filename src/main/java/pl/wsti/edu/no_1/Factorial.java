@@ -15,7 +15,7 @@ public class Factorial extends Dialog {
 
     private static BigInteger calculate(int number) {
         if (number < 0) {
-            throw new IllegalArgumentException(number + " is not a factorial number");
+            throw new IllegalArgumentException("Number argument must be a positive integer");
         }
 
         BigInteger result = BigInteger.ONE;

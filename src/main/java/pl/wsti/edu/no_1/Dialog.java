@@ -60,8 +60,6 @@ public class Dialog {
     }
 
     public void show() {
-        setResult();
-
         JOptionPane.showMessageDialog(
             null,
             getMessage(),
