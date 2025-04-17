@@ -61,7 +61,7 @@ public class Rational implements Comparable<Rational> {
 
     public Rational divide(Rational arg) {
         if (arg.denominator == 0) {
-            throw new ArithmeticException("Numerator cannot be a zero number");
+            throw new ArithmeticException("Denominator cannot be a zero number");
         }
 
         int denominator = arg.denominator;

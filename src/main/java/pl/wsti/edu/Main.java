@@ -5,7 +5,6 @@ import pl.wsti.edu.no_1.Dialog;
 import pl.wsti.edu.no_1.Factorial;
 import pl.wsti.edu.no_1.Odds;
 import pl.wsti.edu.no_2.Exercise;
-import pl.wsti.edu.no_2.Rational;
 
 import java.util.ArrayList;
 import java.util.List;
