@@ -1,7 +1,5 @@
 package pl.wsti.edu.no_3;
 
-import java.util.Arrays;
-
 public class Queue {
     private static final int N = 5;
     private final Object[] data;
@@ -14,10 +12,6 @@ public class Queue {
 
         head = 0;
         length = 0;
-    }
-
-    public int getSize() {
-        return N;
     }
 
     public int getLength() {
