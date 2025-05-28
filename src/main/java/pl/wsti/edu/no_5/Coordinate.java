@@ -21,4 +21,16 @@ public class Coordinate implements Comparable<Coordinate> {
             return Integer.compare(this.y, other.y);
         }
     }
+
+    @Override
+    public boolean equals(Coordinate obj) {
+        if (!(obj instanceof Coordinate)) return false;
+        Coordinate other = (Coordinate) obj;
+        return this.x == other.x && this.y == other.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * x + y;
+    }
 }

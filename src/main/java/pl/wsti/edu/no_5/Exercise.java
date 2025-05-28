@@ -13,13 +13,6 @@ public class Exercise {
 
     public void set() {
         TreeSet<Coordinate> coordinates = new TreeSet<>();
-        int[][] points = {
-                {2, 3},
-                {-3, 0},
-                {-1, 2},
-                {-1, 2},
-                {-3, -2}
-        };
 
         for (int[] point : points) {
             coordinates.add(new Coordinate(point[0], point[1]));
@@ -31,7 +24,7 @@ public class Exercise {
     }
 
     public void map() {
-        Map<Coordinate, String> coordinates = new HashMap<Coordinate, String>();
+        Map<Coordinate, String> coordinates = new HashMap<>();
 
         String[] mapping = {
             "Czerwony",
@@ -49,7 +42,7 @@ public class Exercise {
         Coordinate searched = new Coordinate(points[2][0], points[2][1]);
 
         System.out.println(
-            "Punkt " + searched.toString() +
+            "Punkt " + searched +
             " ma kolor " + coordinates.get(searched)
         );
     }

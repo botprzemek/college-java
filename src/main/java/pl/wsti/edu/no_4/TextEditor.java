@@ -33,9 +33,9 @@ public class TextEditor extends JFrame {
             return;
         }
 
-        File plik = fileChooser.getSelectedFile();
+        File file = fileChooser.getSelectedFile();
         try {
-            FileOutputStream output = new FileOutputStream(plik);
+            FileOutputStream output = new FileOutputStream(file);
             OutputStreamWriter writer = new OutputStreamWriter(output, StandardCharsets.UTF_8);
 
             writer.write(textArea.getText());

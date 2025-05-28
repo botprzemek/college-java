@@ -7,7 +7,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 public class Gzip {
-    public static void compress(String inputFileName, String outputFileName) throws IOException {
+    public void compress(String inputFileName, String outputFileName) {
         try (FileInputStream input = new FileInputStream(inputFileName)) {
             FileOutputStream output = new FileOutputStream(outputFileName);
             GZIPOutputStream gzip = new GZIPOutputStream(output);
@@ -19,12 +19,13 @@ public class Gzip {
             input.close();
             output.close();
             gzip.close();
-        } catch (IOException e) {
-            throw new IOException(e);
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void decompress(String inputFileName, String outputFileName) throws IOException {
+    public void decompress(String inputFileName, String outputFileName) {
         try (FileInputStream input = new FileInputStream(inputFileName)) {
             FileOutputStream output = new FileOutputStream(outputFileName);
             GZIPInputStream gzip = new GZIPInputStream(input);
@@ -34,8 +35,9 @@ public class Gzip {
             input.close();
             output.close();
             gzip.close();
-        } catch (IOException e) {
-            throw new IOException(e);
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
